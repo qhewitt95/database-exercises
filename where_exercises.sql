@@ -35,7 +35,6 @@ where last_name like ('e%')
 
 
 #Find employees with a 'Q' but not 'Qu'
-/*select last_name
+select last_name
 from employees
-where last_name like ('%q%') and employees
-not like ('%qu%');*/
+where last_name like ('%q%') and employees.last_name not like ('%qu%');
