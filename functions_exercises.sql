@@ -55,5 +55,9 @@ where YEAR(e.hire_date) BETWEEN 1990 and 1999
   and MONTH(e.birth_date) = 12
 order by e.hire_date desc limit 1;
 
-
+select e.first_name,e.last_name,DATEDIFF(CURRENT_DATE(), e.hire_date) daysAtCompany
+from employees.employees e
+where YEAR(e.hire_date) BETWEEN 1990 and 1999
+  and DAY(e.birth_date) = 25
+  and MONTH(e.birth_date) = 12
 
