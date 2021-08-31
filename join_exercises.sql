@@ -5,7 +5,7 @@ SELECT d.dept_name as `Department Name`,
 from departments d
     inner join dept_manager dm on d.dept_no = dm.dept_no
 inner join employees e on dm.emp_no = e.emp_no
-where dm.to_date = '9999-01-01';
+where dm.to_date = '9999-01-01' and e.gender = 'F';
 
 select t.title, count(t.title)
 from departments d
